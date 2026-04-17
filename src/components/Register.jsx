@@ -129,7 +129,6 @@ const RegisterPage = () => {
 
             <div className="text-center mb-[1.5vw]">
               <h1 className="text-[1.5vw] font-bold text-gray-800">Employee Registration</h1>
-            
             </div>
 
             {/* Error Message */}

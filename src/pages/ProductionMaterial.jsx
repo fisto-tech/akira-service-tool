@@ -968,7 +968,7 @@ export default function ProductionMaterial() {
     }
 
     if (employeeFilter !== "All") {
-      filtered = filtered.filter(row => (row.products || []).some(p => p.assembledBy === employeeFilter || p.testedBy === employeeFilter || p.fiBy === employeeFilter));
+      filtered = filtered.filter(row => row.creatorUserId === employeeFilter);
     }
 
     if (selectedCategory !== "All" && categoryFilterType === "Stage") {

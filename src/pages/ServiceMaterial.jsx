@@ -358,10 +358,22 @@ const ReportsModal = ({ row, onClose }) => {
                               value={r.correctiveAction}
                             />
                             {r.partsReplacement && (
-                              <DetailSection
-                                label="Parts Replacement"
-                                value={r.partsReplacement}
-                              />
+                              <div className="bg-white border border-slate-200 rounded-[0.5vw] p-[0.8vw] shadow-sm hover:border-blue-200 transition-all">
+                                <span className="text-[0.62vw] font-bold text-blue-500 uppercase block mb-[0.6vw]">
+                                  Parts Replacement
+                                </span>
+                                <div className="space-y-[0.4vw]">
+                                  {r.partsReplacement.split(',').map(s => s.trim()).filter(s => s.length > 0).map((part, i) => (
+                                    <div key={i} className="flex items-center gap-[0.6vw] text-[0.8vw] font-bold text-slate-800 bg-slate-50 border border-slate-100 px-[0.6vw] py-[0.4vw] rounded-[0.4vw]">
+                                      <div className="w-[0.4vw] h-[0.4vw] rounded-full bg-blue-500" />
+                                      {part}
+                                    </div>
+                                  ))}
+                                  {r.partsReplacement.split(',').map(s => s.trim()).filter(s => s.length > 0).length === 0 && (
+                                    <div className="text-[0.82vw] text-slate-400 italic">No parts recorded</div>
+                                  )}
+                                </div>
+                              </div>
                             )}
                           </div>
                           <div className="bg-blue-50/40 rounded-[0.6vw] border border-blue-100 p-[1vw]">
