@@ -129,7 +129,7 @@ const RegisterPage = () => {
 
             <div className="text-center mb-[1.5vw]">
               <h1 className="text-[1.5vw] font-bold text-gray-800">Employee Registration</h1>
-              <p className="text-gray-500 text-[0.9vw]">Join Akira Service Tool network</p>
+            
             </div>
 
             {/* Error Message */}
@@ -277,11 +277,7 @@ const RegisterPage = () => {
               </button>
             </form>
 
-            <div className="mt-[1.2vw] text-center">
-              <p className="text-[0.85vw] text-gray-500">
-                By registering, you agree to Akira Service Tool's terms of service and privacy policy.
-              </p>
-            </div>
+           
           </div>
         </div>
       </div>
